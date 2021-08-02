@@ -13,5 +13,11 @@ def save_users(user):
   Function that saves a new user
   '''
   user.save_user()
-  
+
+def del_contact(user):
+  '''
+  Function that deletes a user
+  '''
+  user.delete_contact()
+
 
