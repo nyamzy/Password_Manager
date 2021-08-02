@@ -73,7 +73,19 @@ class TestUser(unittest.TestCase):
     test case that tests if we can display all users
     '''
     self.assertEqual(User.display_users(),User.users)
-    
+
+  def test_user_exists(self):
+    '''
+    test case that returns a Boolean if we cannot find a user
+    '''
+    self.new_user.save_user()
+    test_user = User("Test", "Two", "testy", "testy@gmail.com", "testing123")
+    test_user.save_user()
+
+    user_exists = User.users("testy")
+    self.assertTrue(user_exists)
+
+
 
 if __name__ == '__main__':
   unittest.main()
