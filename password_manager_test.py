@@ -89,3 +89,24 @@ class TestUser(unittest.TestCase):
 
 if __name__ == '__main__':
   unittest.main()
+
+
+
+
+class TestCredentials(unittest.TestCase):
+  '''
+  Subclass for testing the cases for the credentials class behaviours
+  '''
+  def setUp(self):
+    '''
+    Set up method that runs before each test case
+    '''
+    self.new_credential = Credentials("nyamzy", "facebook", "hello123",) #create new credential object
+
+  def tearDown(self):
+    '''
+    tearDown method that cleans up after each test has run
+    '''
+    Credentials.accounts = []
+
+  

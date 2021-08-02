@@ -44,7 +44,7 @@ def main():
   print("Hi there. Welcome to your password manager app. Kindly let me know your name.")
   user_name = input()
 
-  print("Hi {user_name}! What would you like to do today?")
+  print(f"Hi {user_name}! What would you like to do today?")
   print("\n")
 
   while True:
@@ -109,6 +109,7 @@ def main():
 
     else:
       print("Please use the correct number")
-      
+
+
 
 
