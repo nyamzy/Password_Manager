@@ -86,7 +86,12 @@ class Credentials:
     '''
     Credentials.accounts.remove(self)
 
-  
+  @classmethod
+  def display_credentials(cls):
+    '''
+    display credentials method that returns a list of all credentials saved
+    '''
+    return cls.accounts
 
   pass
 

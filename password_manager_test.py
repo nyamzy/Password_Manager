@@ -101,7 +101,7 @@ class TestCredentials(unittest.TestCase):
     '''
     Set up method that runs before each test case
     '''
-    self.new_credential = Credentials("nyamzy", "facebook", "hello123",) #create new credential object
+    self.new_credential = Credentials("nyamzy", "facebook", "hello123") #create new credential object
 
   def tearDown(self):
     '''
@@ -146,3 +146,14 @@ class TestCredentials(unittest.TestCase):
 
     self.new_credential.delete_credential() #Delete credential method
     self.assertEqual(len(Credentials.accounts),1)
+
+  def test_display_credentials(self):
+    '''
+    test case that tests if we can display all credentials accounts
+    '''
+    self.assertEqual(Credentials.display_credentials(),Credentials.accounts)
+
+
+
+if __name__ == '__main__':
+  unittest.main()
