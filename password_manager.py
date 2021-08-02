@@ -22,6 +22,11 @@ class User:
     '''
     User.users.append(self)
 
+  def delete_user(self):
+    '''
+    delete user method that deletes a user from the users list
+    '''
+    User.users.remove(self)
     
   pass
 
