@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from password_manager import User
+from password_manager import User, Credentials
 
 def create_user(fname, lname, uname, email, password):
   '''
@@ -111,5 +111,6 @@ def main():
       print("Please use the correct number")
 
 
-
+if __name__ == '__main__':
+  main()
 
