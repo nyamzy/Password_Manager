@@ -11,6 +11,11 @@ class TestUser(unittest.TestCase):
     '''
     self.new_user = User("John", "Nyamweya", "nyamzy", "johnnyamweya@gmail.com", "hello123",) #create new user object
 
+  def tearDown(self):
+    '''
+    tearDown method that cleans up after each test has run
+    '''
+    User.users = []
 
   def test_init(self):
     '''
@@ -40,7 +45,7 @@ class TestUser(unittest.TestCase):
     test_user.save_user()
 
     self.assertEqual(len(User.users),2)
-     
+
 
 
 if __name__ == '__main__':
