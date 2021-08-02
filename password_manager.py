@@ -27,7 +27,18 @@ class User:
     delete user method that deletes a user from the users list
     '''
     User.users.remove(self)
-    
+
+  @classmethod
+  def find_by_username(cls,username):
+    '''
+    find by username method that takes in a username and returns a user that matches the same username
+    '''
+    for user in cls.users:
+      if user.user_name == username:
+        return user
+        
+
+
   pass
 
 class Credentials:
