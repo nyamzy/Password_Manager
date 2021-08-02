@@ -2,6 +2,10 @@ class User:
   '''
   Class that generates new instances of users
   '''
+
+  users = [] #Create empty list that will store the users
+
+
   def __init__(self, first_name, last_name, user_name, email, password):
     '''
     __init__ method that defines properties for our objects
