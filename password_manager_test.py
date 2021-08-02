@@ -134,6 +134,15 @@ class TestCredentials(unittest.TestCase):
     test_credential = Credentials("testy", "instagram", "testing123")
     test_credential.save_credential()
 
-    self.assertEqual(len(User.users),2)
-    
-  
+    self.assertEqual(len(Credentials.accounts),2)
+
+  def test_delete_credential(self):
+    '''
+    test case to check if we can delete a credential account
+    '''
+    self.new_credential.save_credential()
+    test_credential = Credentials("testy", "instagram", "testing123")
+    test_credential.save_credential()
+
+    self.new_credential.delete_credential() #Delete credential method
+    self.assertEqual(len(Credentials.accounts),1)
