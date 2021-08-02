@@ -67,8 +67,13 @@ class TestUser(unittest.TestCase):
 
     found_user = User.find_by_username("testy")
     self.assertEqual(found_user.email, test_user.email)
-    
 
+  def test_display_users(self):
+    '''
+    test case that tests if we can display all users
+    '''
+    self.assertEqual(User.display_users(),User.users)
+    
 
 if __name__ == '__main__':
   unittest.main()
