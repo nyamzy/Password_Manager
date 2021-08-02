@@ -58,6 +58,9 @@ class User:
 
   pass
 
+
+
+
 class Credentials:
   '''
   Class that generates new instances of credentials for users
@@ -92,6 +95,17 @@ class Credentials:
     display credentials method that returns a list of all credentials saved
     '''
     return cls.accounts
+
+  @classmethod
+  def credential_exist(cls,username):
+    '''
+    credential exists method that checks if a user exists from the users list
+    '''
+    for credential in cls.accounts:
+      if credential.user_name == username:
+        return True
+
+    return False
 
   pass
 
