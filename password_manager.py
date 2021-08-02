@@ -36,8 +36,13 @@ class User:
     for user in cls.users:
       if user.user_name == username:
         return user
-        
 
+  @classmethod
+  def display_users(cls):
+    '''
+    display users method that returns a list of all users saved
+    '''
+    return cls.users
 
   pass
 
