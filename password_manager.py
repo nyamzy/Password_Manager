@@ -45,18 +45,17 @@ class User:
     return cls.users
 
   @classmethod
-  def user_exists(cls,username):
+  def user_exist(cls,username):
     '''
     user exists method that checks if a user exists from the users list
     '''
     for user in cls.users:
-      if user.username == username:
+      if user.user_name == username:
         return True
 
-      else:
-        return False
+    return False
 
-        
+
   pass
 
 class Credentials:
