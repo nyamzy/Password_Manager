@@ -46,7 +46,17 @@ class TestUser(unittest.TestCase):
 
     self.assertEqual(len(User.users),2)
 
+  def test_delete_user(self):
+    '''
+    test case to check if we can delete a user
+    '''
+    self.new_user.save_user()
+    test_user = User("Test", "Two", "testy", "testy@gmail.com", "testing123")
+    test_user.save_user()
 
+    self.new_user.delete_user() #Delete user method
+    self.assertEqual(len(User.users),1)
+    
 
 if __name__ == '__main__':
   unittest.main()
