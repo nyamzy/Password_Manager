@@ -20,4 +20,9 @@ def del_contact(user):
   '''
   user.delete_contact()
 
+def find_user(username):
+  '''
+  Function that finds a user by username and returns the user
+  '''
+  return User.find_by_username(username)
 
