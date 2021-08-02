@@ -118,5 +118,22 @@ class TestCredentials(unittest.TestCase):
     self.assertEqual(self.new_credential.application,"facebook")
     self.assertEqual(self.new_credential.password,"hello123")
 
-  
+  def test_save_credential(self):
+    '''
+    test case to test if the credential object is saved in the accounts list
+    '''
+
+    self.new_credential.save_credential() #Save credentials method
+    self.assertEqual(len(Credentials.accounts),1)
+
+  def test_save_multiple_credentials(self):
+    '''
+    test case to check if we can save multiple credentials
+    '''
+    self.new_credential.save_credential()
+    test_credential = Credentials("testy", "instagram", "testing123")
+    test_credential.save_credential()
+
+    self.assertEqual(len(User.users),2)
+    
   
